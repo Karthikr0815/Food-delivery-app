@@ -1,0 +1,19 @@
+<div class="orders-container">
+    <h2>My Orders</h2>
+    <div *ngIf="orders.length > 0; else noOrders">
+        <div *ngFor="let order of orders" class="order-card">
+            <div class="order-header">
+                <p><strong>Order #{{ order.id }}</strong></p>
+                <span class="status" [ngClass]="order.status.toLowerCase()">{{ order.status }}</span>
+            </div>
+            <div class="order-details">
+                <p>Items: {{ order.items.length }}</p>
+                <p>Total: ₹{{ order.totalAmount }}</p>
+                <p>Date: {{ order.orderDate | date:'medium' }}</p>
+            </div>
+        </div>
+    </div>
+    <ng-template #noOrders>
+        <p>You haven't placed any orders yet.</p>
+    </ng-template>
+</div>
