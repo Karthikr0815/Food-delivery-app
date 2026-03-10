@@ -1,85 +1,251 @@
-# 🍔 Food Delivery App - Angular Dashboard
+# 🍔 Food Delivery Application
 
-A professional, modular Food Delivery Management Dashboard built with Angular and TypeScript. This project demonstrates advanced Angular architecture, dynamic data manipulation, and responsive UI design tailored for food service operations.
+A modern, responsive, and fully functional **Food Delivery application** built using **Angular 17** and **Modern CSS**.
 
-## 👨‍💻 Team Details
+This project uses **mock data services** to simulate real-world data interactions like browsing restaurants, viewing menus, adding to cart, and checking out orders without needing a backend server.
 
-Meet the developers behind this project:
+---
 
-*   **GOPIREDDY RETHVIK REDDY**
-*   **ADERU RAGHAVENDRA TEJA**
-*   **ABEL FRANCIS**
-*   **V EBINESH**
+# ✨ Features
 
-## 🎯 Project Scope & Features
+### 🔍 Restaurant Browsing
+View a comprehensive list of available restaurants with mock data including cuisine types and ratings.
 
-### 1. TypeScript Foundations & Data Modeling
-*   **Strict Typing:** Full implementation of robust interfaces for `MenuItem`, `Restaurant`, and `Order`.
-*   **Data Fields:** Comprehensive tracking including ID, Name, Description, Price, Category, and Image URL.
+### 📄 Menu Details
+Click into individual restaurants to view in-depth details of their menu items, descriptions, and prices.
 
-### 2. Angular Architecture
-*   **Module-Based Design:** Organized via `AppModule` with clean component declarations.
-*   **Component Communication:** Implementation of `@Input()` and `@Output()` decorators for seamless data flow.
+### 🛒 Cart Management
+Users can add items to their cart, view total prices in real-time, and easily clear their cart.
 
-### 3. Advanced Dashboard Features
-*   **Operational Overview:** Real-time metrics for restaurant listings and order management.
-*   **Dynamic Data Controls:**
-    *   **Restaurant Listing:** Browse and filter restaurants by cuisine and rating.
-    *   **Cart Management:** Add/remove items and calculate total amounts in real-time.
-    *   **Order Tracking:** Monitor order status from 'Pending' to 'Delivered'.
-*   **Full CRUD Operations:**
-    *   ➕ **Create:** Add new menu items or restaurants.
-    *   📖 **Read:** Real-time data visualization of menus and orders.
-    *   ✏️ **Update:** Editing existing restaurant or menu details.
-    *   🗑️ **Delete:** Removing records from the database.
+### 💳 Checkout
+A dedicated checkout page for users to place their orders with a simulated delivery address form.
 
-## 🛠️ Technologies Used
+### 📦 Order Tracking
+Monitor order status from 'Pending' to 'Delivered' using a mock order management system.
 
-| Category | Technology |
-| :--- | :--- |
-| **Framework** | Angular 17 |
-| **Language** | TypeScript |
-| **Styling** | Modern CSS3 |
-| **Environment** | Node.js, Angular CLI |
-| **Editor** | Visual Studio Code |
+### 🎨 Clean UI/UX
+Styled using **Modern CSS** for a clean, responsive, and intuitive design without relying on heavy external libraries.
 
-## 💻 Installation & Setup
+---
 
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/Karthikr0815/Food-delivery-app.git
-    ```
+# 🛠 Technology Stack
 
-2.  **Navigate to the project directory**
-    ```bash
-    cd Food-delivery-app
-    ```
+| Technology | Description |
+|------------|-------------|
+| Angular | Frontend framework |
+| CSS | Styling |
+| TypeScript | Programming Language |
+| Karma/Jasmine | Unit testing |
 
-3.  **Install dependencies**
-    ```bash
-    npm install
-    ```
+**Versions Used**
 
-4.  **Run the application**
-    ```bash
-    ng serve
-    ```
+- Angular `v17.3.0`
+- Node.js `v18+`
+- npm `v9+`
 
-**View the dashboard:** Open [http://localhost:4200](http://localhost:4200) in your browser.
+---
 
-## 📂 Project Structure
+## 🏗️ Architecture Diagram
 
-```text
-src/app/
-├── components/             # UI Components (Cart, Checkout, Restaurant List)
-├── models/                 # Core TypeScript interfaces (MenuItem, Restaurant, Order)
-├── services/               # Business logic and data services (Cart, Order)
-├── app.component.ts        # Root application logic
-└── app.module.ts           # Module definitions
+```mermaid
+graph TD
+    User([👤 User / Browser])
+
+    subgraph "💻 Frontend (Angular 17)"
+        UI[🧩 Components<br/>(Views & UI)]
+        Services[⚙️ Services<br/>(Cart & Order Logic)]
+        Models[📐 Models<br/>(Data Structures)]
+    end
+
+    User -->|Interacts with| UI
+    UI -->|Calls| Services
+    Services -->|Manages State with| Models
 ```
 
-## 🚀 Quick Start
+---
 
-*   Ensure you have Node.js (v18+) and Angular CLI installed.
-*   Clone and install as shown above.
-*   Access the dashboard at [http://localhost:4200](http://localhost:4200).
+# 🚀 Getting Started
+
+Follow the instructions below to run the project locally.
+
+---
+
+# 📋 Prerequisites
+
+Make sure you have the following installed:
+
+### Install Node.js
+Download from:
+
+```text
+[https://nodejs.org](https://nodejs.org)
+```
+
+Check versions:
+
+```bash
+node -v
+npm -v
+```
+
+### Install Angular CLI
+
+```bash
+npm install -g @angular/cli@17
+```
+
+Verify installation:
+
+```bash
+ng version
+```
+
+---
+
+# 📥 Installation
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/Karthikr0815/Food-delivery-app.git
+```
+
+### 2️⃣ Navigate to the project folder
+
+```bash
+cd Food-delivery-app
+```
+
+### 3️⃣ Install project dependencies
+
+```bash
+npm install
+```
+
+---
+
+# 💻 Run the Project Locally
+
+Run the following command in the project root folder:
+
+```bash
+npm start
+```
+
+or
+
+```bash
+ng serve
+```
+
+Angular development server will start at:
+
+```text
+http://localhost:4200
+```
+
+---
+
+# 🌐 Open the Application
+
+Once the server is running, open your browser:
+
+```text
+http://localhost:4200
+```
+
+The application supports **live reload**, so changes in code will automatically refresh the page.
+
+---
+
+# 📂 Project Structure
+
+```text
+Food-delivery-app
+│
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── cart
+│   │   │   ├── checkout
+│   │   │   ├── menu-list
+│   │   │   ├── navbar
+│   │   │   ├── order-status
+│   │   │   └── restaurant-list
+│   │   │
+│   │   ├── models/
+│   │   │   └── models.ts
+│   │   │
+│   │   ├── services/
+│   │   │   ├── cart.service.ts
+│   │   │   └── order.service.ts
+│   │   │
+│   │   └── app.routes.ts
+│   │
+│   └── index.html
+│
+└── package.json
+```
+
+---
+
+# 📦 Important Files
+
+### `src/app/models/models.ts`
+
+Defines the core data structures for the application:
+* `Restaurant`
+* `MenuItem`
+* `Order`
+
+### `src/app/app.routes.ts`
+
+Defines the **application routing** to navigate between restaurants, menus, cart, and checkout.
+
+### `src/app/services/`
+
+Contains the Angular services that manage the business logic and state for the shopping cart and user orders.
+
+---
+
+# 🧪 Testing
+
+Run unit tests using **Karma/Jasmine**:
+
+```bash
+npm run test
+```
+
+---
+
+# 📦 Build for Production
+
+To generate a production build:
+
+```bash
+npm run build
+```
+
+The compiled files will be generated inside:
+
+```text
+dist/food-delivery-app
+```
+
+---
+
+# 👨‍💻 Development Notes
+
+* Pure CSS is used for styling the UI components, keeping the framework lightweight.
+* Mock services using RxJS handle data operations to simulate backend interactions.
+* The application leverages Angular 17's standalone components for cleaner module management.
+
+---
+
+# ⭐ Future Improvements
+
+* Real backend integration (e.g., Node.js / Express or Spring Boot)
+* Payment Gateway Integration (Stripe / Razorpay)
+* User Authentication & Authorization
+* Dynamic Restaurant Ratings and Reviews
+* Real-time Delivery Tracking Map
