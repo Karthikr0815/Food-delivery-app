@@ -49,12 +49,12 @@ Styled using **Modern CSS** for a clean, responsive, and intuitive design withou
 
 ```mermaid
 graph TD
-    User([👤 User / Browser])
+    User(["👤 User / Browser"])
 
     subgraph "💻 Frontend (Angular 17)"
-        UI[🧩 Components<br/>(Views & UI)]
-        Services[⚙️ Services<br/>(Cart & Order Logic)]
-        Models[📐 Models<br/>(Data Structures)]
+        UI["🧩 Components<br/>(Views & UI)"]
+        Services["⚙️ Services<br/>(Cart & Order Logic)"]
+        Models["📐 Models<br/>(Data Structures)"]
     end
 
     User -->|Interacts with| UI
